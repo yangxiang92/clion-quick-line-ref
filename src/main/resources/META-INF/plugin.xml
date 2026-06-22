@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>com.shawnyang.quicklineref</id>
+    <name>Quick Line Ref</name>
+    <vendor>ShawnYang</vendor>
+
+    <depends>com.intellij.modules.clion</depends>
+
+    <actions>
+        <action
+                id="com.shawnyang.quicklineref.CopyReferenceAction"
+                class="com.shawnyang.quicklineref.CopyQuickLineRefAction"
+                text="Copy Quick Line Ref"
+                description="Copy a real file reference with line numbers to the clipboard">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt R"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="meta alt R"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="meta alt R"/>
+        </action>
+    </actions>
+</idea-plugin>
